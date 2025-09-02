@@ -16,7 +16,7 @@ echo "$GHCR_TOKEN" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
 GHCR_USER=${GHCR_USER,,}
 
 artifacts_to_push="avery_qemu-docker.zip apciexactor-2.5c.cxl.tar.gz aqcxl_sim-2023_1215.tar.gz avery_pli-2023_1128.tar.gz vcsmx.tar.gz core-image-cxl-sdk-cxlx86-64.rootfs.wic.qcow2 verdi.tar.gz"
-artifacts_to_push="avery_qemu-docker.zip"
+#artifacts_to_push="avery_qemu-docker.zip"
 for artifact in ${artifacts_to_push}; do
 	test -f ./artifacts/$artifact || echo "./artifacts/$artifact doesn't exist!"
 	ls ./artifacts/$artifact
